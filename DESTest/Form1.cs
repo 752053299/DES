@@ -34,7 +34,7 @@ namespace DESTest
 
             Encrypt encrypt = new Encrypt(EncryptClass.EncryptDES);
 
-            encrypt.BeginInvoke(SourceFilePath, OutFile, "75205329", new AsyncCallback(encryptCompleted),null);
+            encrypt.BeginInvoke(SourceFilePath, OutFile, "12345678", new AsyncCallback(encryptCompleted),null);
             labelState.Text = "开始加密,请稍等";
         }
 
@@ -87,7 +87,7 @@ namespace DESTest
 
             Encrypt decrypt = new Encrypt(EncryptClass.DecryptDES);
 
-            decrypt.BeginInvoke(SourceFilePath, OutFile, "75205329", new AsyncCallback(decryptCompleted), null);
+            decrypt.BeginInvoke(SourceFilePath, OutFile, "12345678", new AsyncCallback(decryptCompleted), null);
             labelState.Text = "开始解密，请稍等";
         }
 
